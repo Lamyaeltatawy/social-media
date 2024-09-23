@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="blog-header">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+<div class="content">
+  <div class="left">
+    <app-features ></app-features>
+  <app-card  [comments]="comments" *ngIf="comments && data && data.length > 0" [data]="data" ></app-card>
+  <p *ngIf="!data">No Posts</p>
+  </div>
+  <div class="right">
+    <app-side-users></app-side-users>
+  </div>
+</div>  
+</div>
